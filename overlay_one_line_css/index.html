@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Hero</title>
+	<style>
+	
+	
+	
+	@layer general-styling{
+  html{
+    color-scheme: dark;
+    font-family: system-ui;
+    line-height: 1.5;
+  }
+  
+  h1, p{
+    font-size: 2rem;
+  }
+}
+.overlay{
+  border-image-source:  linear-gradient(to right, rgba(255,0,0,0.5), rgba(0,0,0,0.5));
+  border-image-slice: fill 1;
+  border-width: 10px;
+  border-style: solid;
+}
+.hero{
+  position: relative;
+  z-index:2;
+  background-image: url('https://images.pexels.com/photos/20260233/pexels-photo-20260233/free-photo-of-musica-piano-teclado-llaves.jpeg?auto=compress&cs=tinysrgb&w=600');
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  
+  min-block-size: 80vh;
+  place-content: center;
+  text-align:center;
+}
+
+.hero::before{
+  position:absolute;
+  content:"";
+  inset:0;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  z-index:-1;
+}
+
+	
+	
+	</style>
+</head>
+
+
+<body>
+   <section class="hero overlay">
+	  <h1>Un overlay de manera muy sencilla</h1>
+	  <p>en una sola linea de css</p>
+</section>
+</body>
+</html>
