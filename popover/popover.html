@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popover</title>
+    <style>
+
+.wrapper{
+  background: hsla(259, 100%, 9%, 1);
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+}
+
+button{
+   padding: 1rem 2rem;
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
+  background-image: radial-gradient(#957be1, #d2d3e4);
+  color:white;
+}
+
+[popover]{
+  background: radial-gradient(#957be1, #d2d3e4);
+  color:white;
+  border-radius: 20px;
+  animation: show 1s backwards  ;
+     
+}
+
+@keyframes show{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div id="popover" popover="manual">
+            <h1>Mira que pedazo popover</h1>
+          <button popovertarget="popover" popovertargetaction="hide">X</button>
+        </div>
+        
+        <button popovertarget="popover">Mostrar</button>
+          
+    </div>
+        
+    
+</body>
+</html>
