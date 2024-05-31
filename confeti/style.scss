@@ -24,8 +24,8 @@ body{
     border-radius: 100vw;
     cursor: pointer;
     transition: background-position 200ms;
-/*     transform: rotateY(75deg);
- */    transform-style: preserve-3d;
+
+    transform-style: preserve-3d;
 
 
     &:hover,
@@ -35,11 +35,11 @@ body{
     }
 }
 
-/*
+
 .party:active span{
     animation: none;
 }
-*/
+
 
 @function halfNegative($value){
    @return ($value/2) - math.random($value);
@@ -49,7 +49,6 @@ body{
     position: absolute;
     inset: 50%;
     opacity: 0;
-   /*  opacity: 1; */
     transform-style: preserve-3d;
 }
 
